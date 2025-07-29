@@ -1,8 +1,5 @@
 # Dockerfile pour Laravel
-FROM php:8.2-cli-slim
-
-# Ensure all packages are up to date to reduce vulnerabilities
-RUN apt-get update && apt-get upgrade -y
+FROM php:8.2-cli
 
 # Installer les dépendances système
 RUN apt-get update && apt-get install -y \
