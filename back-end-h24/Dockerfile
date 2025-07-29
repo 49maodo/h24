@@ -20,6 +20,9 @@ COPY . /var/www/html
 # Définir le répertoire de travail
 WORKDIR /var/www/html
 
+# Autoriser Composer à tourner en root (important)
+ENV COMPOSER_ALLOW_SUPERUSER=1
+
 # Installer les dépendances du projet
 RUN composer install --optimize-autoloader --no-dev
 
