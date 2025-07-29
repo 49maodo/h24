@@ -1,0 +1,129 @@
+# ================================
+# BACK-END (Laravel) GITIGNORE
+# ================================
+
+# Laravel specific
+/back-end-h24/vendor/
+/back-end-h24/node_modules/
+/back-end-h24/public/hot
+/back-end-h24/public/storage
+/back-end-h24/storage/*.key
+/back-end-h24/storage/app/public/
+/back-end-h24/storage/framework/cache/data/
+/back-end-h24/storage/framework/sessions/
+/back-end-h24/storage/framework/testing/
+/back-end-h24/storage/framework/views/
+/back-end-h24/storage/logs/
+/back-end-h24/.env
+/back-end-h24/.env.backup
+/back-end-h24/.env.production
+/back-end-h24/.phpunit.result.cache
+/back-end-h24/Homestead.json
+/back-end-h24/Homestead.yaml
+/back-end-h24/auth.json
+/back-end-h24/npm-debug.log
+/back-end-h24/yarn-error.log
+/back-end-h24/.DS_Store
+/back-end-h24/Thumbs.db
+
+# Laravel Mix / Vite
+/back-end-h24/public/build/
+/back-end-h24/public/mix-manifest.json
+/back-end-h24/public/js/
+/back-end-h24/public/css/
+
+# IDE files
+/back-end-h24/.idea/
+/back-end-h24/.vscode/
+/back-end-h24/*.swp
+/back-end-h24/*.swo
+
+# Composer
+/back-end-h24/composer.phar
+
+# ================================
+# FRONT-END (React/Vite) GITIGNORE
+# ================================
+
+# Dependencies
+/front-end-h24/node_modules/
+/front-end-h24/.pnp
+/front-end-h24/.pnp.js
+/front-end-h24/.yarn/install-state.gz
+
+# Production builds
+/front-end-h24/build/
+/front-end-h24/dist/
+
+# Development
+/front-end-h24/.vite/
+
+# Environment variables
+/front-end-h24/.env
+/front-end-h24/.env.local
+/front-end-h24/.env.development.local
+/front-end-h24/.env.test.local
+/front-end-h24/.env.production.local
+
+# Logs
+/front-end-h24/npm-debug.log*
+/front-end-h24/yarn-debug.log*
+/front-end-h24/yarn-error.log*
+/front-end-h24/pnpm-debug.log*
+/front-end-h24/lerna-debug.log*
+
+# Editor directories and files
+/front-end-h24/.vscode/*
+/front-end-h24/!.vscode/extensions.json
+/front-end-h24/.idea
+/front-end-h24/.DS_Store
+/front-end-h24/*.suo
+/front-end-h24/*.ntvs*
+/front-end-h24/*.njsproj
+/front-end-h24/*.sln
+/front-end-h24/*.sw?
+
+# Testing
+/front-end-h24/coverage/
+/front-end-h24/.nyc_output
+
+# ================================
+# GÉNÉRAL
+# ================================
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.cache
+
+# IDE files globaux
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Fichiers de configuration locaux
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
