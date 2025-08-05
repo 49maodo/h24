@@ -1,6 +1,7 @@
+# Dockerfile pour Laravel
 FROM php:8.2-cli
 
-# Installer dépendances système
+# Installer les dépendances système
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
@@ -13,22 +14,19 @@ RUN apt-get update && apt-get install -y \
 
 # Installer Composer
 COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
-
-# Copier les fichiers Laravel dans le conteneur
+# Copier les fichiers du projet
 COPY . /var/www/html
 
 # Définir le répertoire de travail
 WORKDIR /var/www/html
 
-# Préparer les dossiers nécessaires à Laravel
-RUN mkdir -p storage/framework/{cache,sessions,views} bootstrap/cache \
-    && chown -R www-data:www-data storage bootstrap/cache \
-    && chmod -R 775 storage bootstrap/cache
+# Autoriser Composer à tourner en root (important)
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
-# Installer les dépendances Laravel
+# Installer les dépendances du projet
 RUN composer install --optimize-autoloader --no-dev
 
-# Exposer le port Laravel
+# Exposer le port 8000
 EXPOSE 8000
 
 # Lancer le serveur Laravel

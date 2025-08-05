@@ -17,9 +17,6 @@
 
 # Logs et cache (mais on garde les dossiers vides)
 storage/*.key
-storage/framework/cache/*
-storage/framework/sessions/*
-storage/framework/views/*
 storage/logs/*
 bootstrap/cache/*
 
