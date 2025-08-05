@@ -38,7 +38,6 @@ RUN mkdir -p storage/framework/cache/data \
 
 # Créer le lien symbolique pour le storage public si nécessaire
 RUN php artisan storage:link || true
-RUN php artisan migrate
 
 # Générer la clé d'application si elle n'existe pas
 #RUN php artisan key:generate || true
@@ -51,5 +50,5 @@ RUN php artisan migrate
 # Exposer le port 8000
 EXPOSE 8000
 
-# Lancer le serveur Laravel
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+# Lancer les migrations puis le serveur Laravel
+CMD ["sh", "-c", "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000"]
