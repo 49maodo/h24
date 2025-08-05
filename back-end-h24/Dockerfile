@@ -38,6 +38,7 @@ RUN mkdir -p storage/framework/cache/data \
 
 # Créer le lien symbolique pour le storage public si nécessaire
 RUN php artisan storage:link || true
+RUN php artisan migrate
 
 # Générer la clé d'application si elle n'existe pas
 #RUN php artisan key:generate || true
