@@ -40,12 +40,12 @@ RUN mkdir -p storage/framework/cache/data \
 RUN php artisan storage:link || true
 
 # Générer la clé d'application si elle n'existe pas
-RUN php artisan key:generate || true
+#RUN php artisan key:generate || true
 
 # Optimiser l'application pour la production
-RUN php artisan config:cache \
-    && php artisan route:cache \
-    && php artisan view:cache
+#RUN php artisan config:cache \
+#    && php artisan route:cache \
+#    && php artisan view:cache
 
 # Exposer le port 8000
 EXPOSE 8000
